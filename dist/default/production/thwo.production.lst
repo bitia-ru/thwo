@@ -1,157 +1,549 @@
 
 
-Microchip Technology PIC LITE Macro Assembler V1.32 build 58300 
-                                                                                               Tue Jul 22 16:32:10 2014
+Microchip Technology PIC LITE Macro Assembler V1.20 build 52243 
+                                                                                               Wed Jul 23 08:28:04 2014
 
-Microchip Technology Omniscient Code Generator (Lite mode) build 58300
-     1                           	processor	10F220
-     2                           	opt	pw 120
-     3                           	opt	lm
-     4                           	psect	maintext,global,class=CODE,split=1,delta=2
-     5                           	psect	cinit,global,class=ENTRY,merge=1,delta=2
-     6                           	psect	cstackBANK0,global,class=BANK0,space=1,delta=1
-     7                           	dabs	1,0x1C,4
-     8  0000                     	;# 
-     9  0001                     	;# 
-    10  0002                     	;# 
-    11  0003                     	;# 
-    12  0004                     	;# 
-    13  0005                     	;# 
-    14  0006                     	;# 
-    15  0007                     	;# 
-    16  0008                     	;# 
-    17  0006                     _TRIS	set	6
-    18  0032                     _GP2	set	50
-    19                           
-    20                           	psect	maintext
-    21  005                     __pmaintext:	
-    22                           ; #config settings
-    23                           
-    24                           
-    25 ;;
-    26 ;;Main: autosize = 0, tempsize = 3, incstack = 0, save=0
-    27 ;;
-    28 ;; *************** function _main *****************
-    29 ;; Defined at:
-    30 ;;		line 6 in file "main.c"
-    31 ;; Parameters:    Size  Location     Type
-    32 ;;		None
-    33 ;; Auto vars:     Size  Location     Type
-    34 ;;		None
-    35 ;; Return value:  Size  Location     Type
-    36 ;;		None               void
-    37 ;; Registers used:
-    38 ;;		wreg, fsr0l, fsr0h
-    39 ;; Tracked objects:
-    40 ;;		On entry : 17F/0
-    41 ;;		On exit  : 0/0
-    42 ;;		Unchanged: 0/0
-    43 ;; Data sizes:     COMMON   BANK0
-    44 ;;      Params:         0       0
-    45 ;;      Locals:         0       0
-    46 ;;      Temps:          0       3
-    47 ;;      Totals:         0       3
-    48 ;;Total ram usage:        3 bytes
-    49 ;; This function calls:
-    50 ;;		Nothing
-    51 ;; This function is called by:
-    52 ;;		Startup code after reset
-    53 ;; This function uses a non-reentrant model
-    54 ;;
-    55  005                     _main:	
-    56                           
-    57                           ;main.c: 8: TRIS = 9;
-    58                           
-    59                           ;incstack = 0
-    60                           ; Regs used in _main: [wregfsr0]
-    61  005  C09                	movlw	9
-    62  006  006                	tris	6
-    63  007                     l395:	
-    64                           ;main.c: 10: while(1)
-    65                           
-    66                           
-    67                           ;main.c: 11: {
-    68                           ;main.c: 12: GP2 = 0;
-    69  007  446                	bcf	6,2	;volatile
-    70                           
-    71                           ;main.c: 13: _delay((unsigned long)((1000)*(4000000/4000.0)));
-    72  008  C06                	movlw	6
-    73  009  032                	movwf	??_main+2
-    74  00A  C13                	movlw	19
-    75  00B  031                	movwf	??_main+1
-    76  00C  CB1                	movlw	177
-    77  00D  030                	movwf	??_main
-    78  00E                     u17:	
-    79  00E  2F0                	decfsz	??_main,f
-    80  00F  A0E                	goto	u17
-    81  010  2F1                	decfsz	??_main+1,f
-    82  011  A0E                	goto	u17
-    83  012  2F2                	decfsz	??_main+2,f
-    84  013  A0E                	goto	u17
-    85  014  A15                	nop2
-    86                           
-    87                           ;main.c: 14: GP2 = 1;
-    88  015  546                	bsf	6,2	;volatile
-    89                           
-    90                           ;main.c: 15: _delay((unsigned long)((1000)*(4000000/4000.0)));
-    91  016  C06                	movlw	6
-    92  017  032                	movwf	??_main+2
-    93  018  C13                	movlw	19
-    94  019  031                	movwf	??_main+1
-    95  01A  CB1                	movlw	177
-    96  01B  030                	movwf	??_main
-    97  01C                     u27:	
-    98  01C  2F0                	decfsz	??_main,f
-    99  01D  A1C                	goto	u27
-   100  01E  2F1                	decfsz	??_main+1,f
-   101  01F  A1C                	goto	u27
-   102  020  2F2                	decfsz	??_main+2,f
-   103  021  A1C                	goto	u27
-   104  022  A23                	nop2
-   105  023  A07                	goto	l395
-   106  024                     __end_of_main:	
-   107  001C                     btemp	set	28	;btemp
-   108  001C                     wtemp	set	28
-   109  001C                     wtemp0	set	28
-   110  001E                     wtemp1	set	30
-   111  0020                     wtemp2	set	32
-   112  0022                     wtemp3	set	34
-   113  0024                     wtemp4	set	36
-   114  0026                     wtemp5	set	38
-   115  001D                     wtemp6	set	29
-   116  001C                     ttemp	set	28
-   117  001C                     ttemp0	set	28
-   118  001F                     ttemp1	set	31
-   119  0022                     ttemp2	set	34
-   120  0025                     ttemp3	set	37
-   121  001D                     ttemp4	set	29
-   122  001C                     ltemp	set	28
-   123  001C                     ltemp0	set	28
-   124  0020                     ltemp1	set	32
-   125  0024                     ltemp2	set	36
-   126  001E                     ltemp3	set	30
-   127                           
-   128                           	psect	cinit
-   129  003                     start_initialization:	
-   130                           ;psect for function _main
-   131                           
-   132  003                     __initialization:	
-   133  003                     end_of_initialization:	
-   134                           ;End of C runtime variable initialization code
-   135                           
-   136  003                     __end_of__initialization:	
-   137  003  064                	clrf	4
-   138  004  A05                	ljmp	_main	;jump to C main() function
+Microchip Technology Omniscient Code Generator (Lite mode) build 52243
+     1  0000                     opt subtitle "Microchip Technology Omniscient Code Generator (Lite mode) build 52243"
+     2                           
+     3                           opt pagewidth 120
+     4                           
+     5                           	opt lm
+     6                           
+     7                           	processor	10F220
+     8                           clrc	macro
+     9                           	bcf	3,0
+    10  0000                     	endm
+    11                           clrz	macro
+    12                           	bcf	3,2
+    13  0000                     	endm
+    14                           setc	macro
+    15                           	bsf	3,0
+    16  0000                     	endm
+    17                           setz	macro
+    18                           	bsf	3,2
+    19  0000                     	endm
+    20                           skipc	macro
+    21                           	btfss	3,0
+    22  0000                     	endm
+    23                           skipz	macro
+    24                           	btfss	3,2
+    25  0000                     	endm
+    26                           skipnc	macro
+    27                           	btfsc	3,0
+    28  0000                     	endm
+    29                           skipnz	macro
+    30                           	btfsc	3,2
+    31  0000                     	endm
+    32  0000                     indf	equ	0
+    33  0000                     indf0	equ	0
+    34  0002                     pc	equ	2
+    35  0002                     pcl	equ	2
+    36  0003                     status	equ	3
+    37  0004                     fsr	equ	4
+    38  0004                     fsr0	equ	4
+    39  0001                     c	equ	1
+    40  0000                     z	equ	0
+    41                           # 46 "C:\Programs\Microchip\xc8\v1.20\include\pic10f220.h"
+    42  0000                     INDF equ 00h ;# 
+    43                           # 65 "C:\Programs\Microchip\xc8\v1.20\include\pic10f220.h"
+    44  0001                     TMR0 equ 01h ;# 
+    45                           # 84 "C:\Programs\Microchip\xc8\v1.20\include\pic10f220.h"
+    46  0002                     PCL equ 02h ;# 
+    47                           # 103 "C:\Programs\Microchip\xc8\v1.20\include\pic10f220.h"
+    48  0003                     STATUS equ 03h ;# 
+    49                           # 170 "C:\Programs\Microchip\xc8\v1.20\include\pic10f220.h"
+    50  0004                     FSR equ 04h ;# 
+    51                           # 189 "C:\Programs\Microchip\xc8\v1.20\include\pic10f220.h"
+    52  0005                     OSCCAL equ 05h ;# 
+    53                           # 259 "C:\Programs\Microchip\xc8\v1.20\include\pic10f220.h"
+    54  0006                     GPIO equ 06h ;# 
+    55                           # 296 "C:\Programs\Microchip\xc8\v1.20\include\pic10f220.h"
+    56  0007                     ADCON0 equ 07h ;# 
+    57                           # 377 "C:\Programs\Microchip\xc8\v1.20\include\pic10f220.h"
+    58  0008                     ADRES equ 08h ;# 
+    59                           	FNCALL	_main,_delay
+    60                           	FNROOT	_main
+    61                           	global	_ADCON0
+    62  0007                     _ADCON0	set	0x7
+    63                           	global	_ADRES
+    64  0008                     _ADRES	set	0x8
+    65                           	global	_GPIO
+    66  0006                     _GPIO	set	0x6
+    67                           	global	_OPTION
+    68  0000                     _OPTION	set	0x0
+    69                           	global	_OSCCAL
+    70  0005                     _OSCCAL	set	0x5
+    71                           	global	_TMR0
+    72  0001                     _TMR0	set	0x1
+    73                           	global	_TRIS
+    74  0006                     _TRIS	set	0x6
+    75                           	global	_GO
+    76  0039                     _GO	set	0x39
+    77                           psect	text0,local,class=CODE,delta=2,merge=1
+    78                           global __ptext0
+    79  000                     __ptext0:	;psect for function _delay
+    80                           ; #config settings
+    81                           global __CFG_MCLRE$ON
+    82  0000                     __CFG_MCLRE$ON equ 0x0
+    83                           global __CFG_WDTE$OFF
+    84  0000                     __CFG_WDTE$OFF equ 0x0
+    85                           global __CFG_IOSCFS$4MHZ
+    86  0000                     __CFG_IOSCFS$4MHZ equ 0x0
+    87                           global __CFG_CP$OFF
+    88  0000                     __CFG_CP$OFF equ 0x0
+    89                           global __CFG_MCPU$ON
+    90  0000                     __CFG_MCPU$ON equ 0x0
+    91                           	file	"C:\Temp\sc0o."
+    92                           	line	#
+    93                           psect cinit,class=ENTRY,delta=2
+    94                           global start_initialization
+    95  003                     start_initialization:
+    96                           
+    97                           global __initialization
+    98  003                     __initialization:
+    99                           psect cinit,class=ENTRY,delta=2,merge=1
+   100                           global end_of_initialization,__end_of__initialization
+   101                           
+   102                           ;End of C runtime variable initialization code
+   103                           
+   104  003                     end_of_initialization:
+   105  003                     __end_of__initialization:clrf fsr
+      + 003  064                	clrf	4
+   106  004  A05                ljmp _main	;jump to C main() function
+   107                           psect	cstackCOMMON,class=COMMON,space=1,noexec
+   108                           global __pcstackCOMMON
+   109  000                     __pcstackCOMMON:
+   110  000                     ??_delay:	; 0 bytes @ 0x0
+   111  000                     ??_main:	; 0 bytes @ 0x0
+   112                           psect	cstackBANK0,class=BANK0,space=1,noexec
+   113                           global __pcstackBANK0
+   114  010                     __pcstackBANK0:
+   115  010                     ?_delay:	; 0 bytes @ 0x0
+   116  010                     ?_main:	; 0 bytes @ 0x0
+   117                           	global	delay@n
+   118  010                     delay@n:	; 1 bytes @ 0x0
+   119  010                     	ds	1
+   120                           	global	main@fan
+   121  011                     main@fan:	; 1 bytes @ 0x1
+   122  011                     	ds	1
+   123                           	global	main@temp
+   124  012                     main@temp:	; 1 bytes @ 0x2
+   125  012                     	ds	1
+   126                           ;!
+   127                           ;!Data Sizes:
+   128                           ;!    Strings     0
+   129                           ;!    Constant    0
+   130                           ;!    Data        0
+   131                           ;!    BSS         0
+   132                           ;!    Persistent  0
+   133                           ;!    Stack       0
+   134                           ;!
+   135                           ;!Auto Spaces:
+   136                           ;!    Space          Size  Autos    Used
+   137                           ;!    COMMON            0      0       0
+   138                           ;!    BANK0            14      3       3
    139                           
-   140                           	psect	cstackBANK0
-   141  010                     __pcstackBANK0:	
-   142  010                     ?_main:	
-   143  010                     ??_main:	
-   144                           ; 0 bytes @ 0x0
+   140                           ;!
+   141                           ;!Pointer List with Targets:
+   142                           ;!
+   143                           ;!    None.
+   144                           
    145                           
-   146                           
-   147                           ; 0 bytes @ 0x0
-   148  010                     	ds	3
+   146                           ;!
+   147                           ;!Critical Paths under _main in COMMON
+   148                           ;!
+   149                           ;!    None.
+   150                           ;!
+   151                           ;!Critical Paths under _main in BANK0
+   152                           ;!
+   153                           ;!    _main->_delay
+   154                           
+   155 ;;
+   156 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+   157 ;;
+   158                           
+   159                           ;!
+   160                           ;!Call Graph Tables:
+   161                           ;!
+   162                           ;! ---------------------------------------------------------------------------------
+   163                           ;! (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+   164                           ;! ---------------------------------------------------------------------------------
+   165                           ;! (0) _main                                                 3     3      0     136
+   166                           ;!                                              1 BANK0      2     2      0
+   167                           ;!                              _delay
+   168                           ;! ---------------------------------------------------------------------------------
+   169                           ;! (1) _delay                                                1     1      0      22
+   170                           ;!                                              0 BANK0      1     1      0
+   171                           ;! ---------------------------------------------------------------------------------
+   172                           ;! Estimated maximum stack depth 1
+   173                           ;! ---------------------------------------------------------------------------------
+   174                           ;!
+   175                           ;! Call Graph Graphs:
+   176                           ;!
+   177                           ;! _main (ROOT)
+   178                           ;!   _delay
+   179                           ;!
+   180                           
+   181                           ;! Address spaces:
+   182                           
+   183                           ;!Name               Size   Autos  Total    Cost      Usage
+   184                           ;!STACK                0      0       1       0        0.0%
+   185                           ;!NULL                 0      0       0       0        0.0%
+   186                           ;!CODE                 0      0       0       0        0.0%
+   187                           ;!BITSFR0              0      0       0       1        0.0%
+   188                           ;!SFR0                 0      0       0       1        0.0%
+   189                           ;!DATA                 0      0       0       1        0.0%
+   190                           ;!BITCOMMON            0      0       0       2        0.0%
+   191                           ;!BITBANK0             E      0       0       3        0.0%
+   192                           ;!COMMON               0      0       0       4        0.0%
+   193                           ;!BANK0                E      3       3       5       21.4%
+   194                           ;!ABS                  0      0       0       6        0.0%
+   195                           
+   196                           	global	_main
+   197                           
+   198 ;; *************** function _main *****************
+   199 ;; Defined at:
+   200 ;;		line 23 in file "main.c"
+   201 ;; Parameters:    Size  Location     Type
+   202 ;;		None
+   203 ;; Auto vars:     Size  Location     Type
+   204 ;;  temp            1    2[BANK0 ] unsigned char 
+   205 ;;  fan             1    1[BANK0 ] unsigned char 
+   206 ;;  i               1    0        unsigned char 
+   207 ;; Return value:  Size  Location     Type
+   208 ;;		None               void
+   209 ;; Registers used:
+   210 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+3, pclath, cstack
+   211 ;; Tracked objects:
+   212 ;;		On entry : 17F/0
+   213 ;;		On exit  : 0/0
+   214 ;;		Unchanged: 0/0
+   215 ;; Data sizes:     COMMON   BANK0
+   216 ;;      Params:         0       0
+   217 ;;      Locals:         0       2
+   218 ;;      Temps:          0       0
+   219 ;;      Totals:         0       2
+   220 ;;Total ram usage:        2 bytes
+   221 ;; Hardware stack levels required when called:    1
+   222 ;; This function calls:
+   223 ;;		_delay
+   224 ;; This function is called by:
+   225 ;;		Startup code after reset
+   226 ;; This function uses a non-reentrant model
+   227 ;;
+   228                           psect	maintext,global,class=CODE,delta=2,split=1
+   229                           global __pmaintext
+   230  005                     __pmaintext:	;psect for function _main
+   231                           psect	maintext
+   232                           	file	"main.c"
+   233                           	line	23
+   234                           	global	__size_of_main
+   235  003B                     	__size_of_main	equ	__end_of_main-_main
+   236                           	
+   237  005                     _main:	
+   238                           ;incstack = 0
+   239                           	opt	stack 1
+   240                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+btemp+3+pclath+cstack]
+   241                           	line	26
+   242                           	
+   243  005                     l458:	
+   244                           ;main.c: 24: unsigned char i;
+   245                           ;main.c: 25: unsigned char temp;
+   246                           ;main.c: 26: unsigned char fan = 0;
+   247  005  071                	clrf	(main@fan)
+   248                           	line	28
+   249                           	
+   250  006                     l460:	
+   251                           ;main.c: 28: OSCCAL &= 0xFE;
+   252  006  CFE                	movlw	(0FEh)
+   253  007  03F                	movwf	btemp+3
+   254  008  21F                	movf	btemp+3,w
+   255  009  165                	andwf	(5),f	;volatile
+   256                           	line	29
+   257                           	
+   258  00A                     l462:	
+   259                           ;main.c: 29: OPTION = 0x95;
+   260  00A  C95                	movlw	(095h)
+   261  00B  002                	option
+   262                           	line	30
+   263                           	
+   264  00C                     l464:	
+   265                           ;main.c: 30: TRIS = 0;
+   266  00C  C00                	movlw	0
+   267  00D  006                	tris	0x6
+   268                           	line	31
+   269                           	
+   270  00E                     l466:	
+   271                           ;main.c: 31: ADCON0 = 0x41;
+   272  00E  C41                	movlw	(041h)
+   273  00F  027                	movwf	(7)	;volatile
+   274                           	line	32
+   275                           	
+   276  010                     l468:	
+   277                           ;main.c: 32: TMR0 = 0xFF;
+   278  010  CFF                	movlw	(0FFh)
+   279  011  021                	movwf	(1)	;volatile
+   280  012  A13                	goto	l470
+   281                           	line	34
+   282                           ;main.c: 34: while(1)
+   283                           	
+   284  013                     l28:	
+   285                           	line	36
+   286                           	
+   287  013                     l470:	
+   288                           ;main.c: 35: {
+   289                           ;main.c: 36: GPIO ^= 2;
+   290  013  C02                	movlw	(02h)
+   291  014  03F                	movwf	btemp+3
+   292  015  21F                	movf	btemp+3,w
+   293  016  1A6                	xorwf	(6),f	;volatile
+   294                           	line	37
+   295                           	
+   296  017                     l472:	
+   297                           ;main.c: 37: GO = 1;
+   298  017  527                	bsf	(57/8),(57)&7	;volatile
+   299                           	line	38
+   300                           	
+   301  018                     l474:	
+   302                           ;main.c: 38: delay(17);
+   303  018  C11                	movlw	(011h)
+   304  019  9FE                	fcall	entry__delay
+   305                           	line	39
+   306                           	
+   307  01A                     l476:	
+   308                           ;main.c: 39: delay(temp);
+   309  01A  212                	movf	(main@temp),w
+   310  01B  9FE                	fcall	entry__delay
+   311                           	line	40
+   312                           	
+   313  01C                     l478:	
+   314                           ;main.c: 40: temp = ADRES;
+   315  01C  208                	movf	(8),w	;volatile
+   316  01D  032                	movwf	(main@temp)
+   317                           	line	42
+   318                           	
+   319  01E                     l480:	
+   320                           ;main.c: 42: if(temp < 18 && !fan) {
+   321  01E  C12                	movlw	(012h)
+   322  01F  092                	subwf	(main@temp),w
+   323  020  603                	skipnc
+   324  021  A23                	goto	u91
+   325  022  A24                	goto	u90
+   326  023                     u91:
+   327  023  A2D                	goto	l486
+   328  024                     u90:
+   329                           	
+   330  024                     l482:	
+   331  024  231                	movf	(main@fan),f
+   332  025  743                	skipz
+   333  026  A28                	goto	u101
+   334  027  A29                	goto	u100
+   335  028                     u101:
+   336  028  A2D                	goto	l486
+   337  029                     u100:
+   338                           	line	43
+   339                           	
+   340  029                     l484:	
+   341                           ;main.c: 43: fan = 1;
+   342  029  071                	clrf	(main@fan)
+   343  02A  2B1                	incf	(main@fan),f
+   344                           	line	44
+   345                           ;main.c: 44: GPIO |= 4;
+   346  02B  546                	bsf	(6)+(2/8),(2)&7	;volatile
+   347  02C  A2D                	goto	l486
+   348                           	line	45
+   349                           	
+   350  02D                     l29:	
+   351                           	line	47
+   352                           	
+   353  02D                     l486:	
+   354                           ;main.c: 45: }
+   355                           ;main.c: 47: if(temp > 20 && fan) {
+   356  02D  C15                	movlw	(015h)
+   357  02E  092                	subwf	(main@temp),w
+   358  02F  703                	skipc
+   359  030  A32                	goto	u111
+   360  031  A33                	goto	u110
+   361  032                     u111:
+   362  032  A13                	goto	l470
+   363  033                     u110:
+   364                           	
+   365  033                     l488:	
+   366  033  211                	movf	(main@fan),w
+   367  034  743                	skipz
+   368  035  A37                	goto	u120
+   369  036  A13                	goto	l470
+   370  037                     u120:
+   371                           	line	48
+   372                           	
+   373  037                     l490:	
+   374                           ;main.c: 48: fan = 0;
+   375  037  071                	clrf	(main@fan)
+   376                           	line	49
+   377                           	
+   378  038                     l492:	
+   379                           ;main.c: 49: GPIO &= ~4;
+   380  038  CFB                	movlw	(0FBh)
+   381  039  03F                	movwf	btemp+3
+   382  03A  21F                	movf	btemp+3,w
+   383  03B  166                	andwf	(6),f	;volatile
+   384  03C  A13                	goto	l470
+   385                           	line	50
+   386                           	
+   387  03D                     l30:	
+   388  03D  A13                	goto	l470
+   389                           	line	51
+   390                           	
+   391  03E                     l31:	
+   392                           	line	34
+   393  03E  A13                	goto	l470
+   394                           	
+   395  03F                     l32:	
+   396                           	line	52
+   397                           	
+   398  03F                     l33:	
+   399                           	global	start
+   400  03F  A02                	ljmp	start
+   401                           	opt stack 0
+   402                           GLOBAL	__end_of_main
+   403  040                     	__end_of_main:
+   404                           	signat	_main,88
+   405                           	global	_delay
+   406                           
+   407 ;; *************** function _delay *****************
+   408 ;; Defined at:
+   409 ;;		line 15 in file "main.c"
+   410 ;; Parameters:    Size  Location     Type
+   411 ;;  n               1    wreg     unsigned char 
+   412 ;; Auto vars:     Size  Location     Type
+   413 ;;  n               1    0[BANK0 ] unsigned char 
+   414 ;; Return value:  Size  Location     Type
+   415 ;;		None               void
+   416 ;; Registers used:
+   417 ;;		wreg, fsr0l, fsr0h, status,2, status,0
+   418 ;; Tracked objects:
+   419 ;;		On entry : 0/0
+   420 ;;		On exit  : 0/0
+   421 ;;		Unchanged: 0/0
+   422 ;; Data sizes:     COMMON   BANK0
+   423 ;;      Params:         0       0
+   424 ;;      Locals:         0       1
+   425 ;;      Temps:          0       0
+   426 ;;      Totals:         0       1
+   427 ;;Total ram usage:        1 bytes
+   428 ;; Hardware stack levels used:    1
+   429 ;; This function calls:
+   430 ;;		Nothing
+   431 ;; This function is called by:
+   432 ;;		_main
+   433 ;; This function uses a non-reentrant model
+   434 ;;
+   435                           psect	text1,local,class=CODE,delta=2,merge=1
+   436                           global __ptext1
+   437  040                     __ptext1:	;psect for function _delay
+   438                           psect	text1
+   439                           	file	"main.c"
+   440                           	line	15
+   441                           	global	__size_of_delay
+   442  0017                     	__size_of_delay	equ	__end_of_delay-_delay
+   443                           	
+   444  040                     _delay:	
+   445                           ;incstack = 0
+   446                           	opt	stack 1
+   447                           ; Regs used in _delay: [wreg-fsr0h+status,2+status,0]
+   448                           psect	jmp_tab,class=ENTRY,delta=2
+   449                           global __pjmp_tab
+   450  0FE                     __pjmp_tab:
+   451                           	global	entry__delay
+   452  0FE                     entry__delay:
+   453  0FE  A40                	ljmp	_delay
+   454                           
+   455                           psect	text1
+   456                           ;delay@n stored from wreg
+   457  040  030                	movwf	(delay@n)
+   458                           	line	16
+   459                           	
+   460  041                     l450:	
+   461                           ;main.c: 16: while(n--) {
+   462  041  A4D                	goto	l456
+   463                           	
+   464  042                     l20:	
+   465                           	line	17
+   466                           	
+   467  042                     l452:	
+   468                           ;main.c: 17: TMR0 = 70;
+   469  042  C46                	movlw	(046h)
+   470  043  021                	movwf	(1)	;volatile
+   471                           	line	18
+   472                           ;main.c: 18: while(TMR0);
+   473  044  A46                	goto	l454
+   474                           	
+   475  045                     l22:	
+   476  045  A46                	goto	l454
+   477                           	
+   478  046                     l21:	
+   479                           	
+   480  046                     l454:	
+   481  046  201                	movf	(1),w
+   482  047  743                	skipz	;volatile
+   483  048  A4A                	goto	u71
+   484  049  A4B                	goto	u70
+   485  04A                     u71:
+   486  04A  A46                	goto	l454
+   487  04B                     u70:
+   488  04B  A4D                	goto	l456
+   489                           	
+   490  04C                     l23:	
+   491  04C  A4D                	goto	l456
+   492                           	line	19
+   493                           	
+   494  04D                     l19:	
+   495                           	line	16
+   496                           	
+   497  04D                     l456:	
+   498                           	
+   499  04D  C01                	movlw	low(01h)
+   500  04E  0B0                	subwf	(delay@n),f
+   501  04F  210                	movf	((delay@n)),w
+   502  050  FFF                	xorlw	0FFh
+   503  051  743                	skipz
+   504  052  A54                	goto	u81
+   505  053  A55                	goto	u80
+   506  054                     u81:
+   507  054  A42                	goto	l452
+   508  055                     u80:
+   509  055  A56                	goto	l25
+   510                           	
+   511  056                     l24:	
+   512                           	line	20
+   513                           	
+   514  056                     l25:	
+   515  056  800                	retlw 0
+   516                           	opt stack 0
+   517                           GLOBAL	__end_of_delay
+   518  057                     	__end_of_delay:
+   519                           	signat	_delay,4216
+   520                           	global	btemp
+   521  001C                     	btemp set 01Ch
+   522                           
+   523                           	DABS	1,28,4	;btemp
+   524                           	global	wtemp0
+   525  001C                     	wtemp0 set btemp
+   526                           	global	wtemp1
+   527  001E                     	wtemp1 set btemp+2
+   528                           	global	wtemp2
+   529  0020                     	wtemp2 set btemp+4
+   530                           	global	wtemp3
+   531  0022                     	wtemp3 set btemp+6
+   532                           	global	ttemp0
+   533  001C                     	ttemp0 set btemp
+   534                           	global	ttemp1
+   535  001F                     	ttemp1 set btemp+3
+   536                           	global	ltemp0
+   537  001C                     	ltemp0 set btemp
+   538                           	global	ltemp1
+   539  0020                     	ltemp1 set btemp+4
 
 
 Data Sizes:
@@ -177,26 +569,31 @@ Critical Paths under _main in COMMON
 
 Critical Paths under _main in BANK0
 
-    None.
+    _main->_delay
 
 Call Graph Tables:
 
  ---------------------------------------------------------------------------------
  (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
  ---------------------------------------------------------------------------------
- (0) _main                                                 3     3      0       0
-                                              0 BANK0      3     3      0
+ (0) _main                                                 3     3      0     136
+                                              1 BANK0      2     2      0
+                              _delay
  ---------------------------------------------------------------------------------
- Estimated maximum stack depth 0
+ (1) _delay                                                1     1      0      22
+                                              0 BANK0      1     1      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 1
  ---------------------------------------------------------------------------------
 
  Call Graph Graphs:
 
  _main (ROOT)
+   _delay
 
  Address spaces:
 Name               Size   Autos  Total    Cost      Usage
-STACK                0      0       0       0        0.0%
+STACK                0      0       1       0        0.0%
 NULL                 0      0       0       0        0.0%
 CODE                 0      0       0       0        0.0%
 BITSFR0              0      0       0       1        0.0%
@@ -209,19 +606,38 @@ BANK0                E      3       3       5       21.4%
 ABS                  0      0       0       6        0.0%
 
 
-Microchip Technology PIC Macro Assembler V1.32 build 58300 
-Symbol Table                                                                                   Tue Jul 22 16:32:10 2014
+Microchip Technology PIC Macro Assembler V1.20 build 52243 
+Symbol Table                                                                                   Wed Jul 23 08:28:04 2014
 
-                     u17 000E                       u27 001C                       fsr 0004  
-                    l395 0007                      _GP2 0032                     _TRIS 0006  
-                   _main 0005                     btemp 001C                     ltemp 001C  
-                   start 0002                     ttemp 001C                     wtemp 001C  
-                  ?_main 0010                    ltemp0 001C                    ltemp1 0020  
-                  ltemp2 0024                    ltemp3 001E                    ttemp0 001C  
-                  ttemp1 001F                    ttemp2 0022                    ttemp3 0025  
-                  ttemp4 001D                    wtemp0 001C                    wtemp1 001E  
-                  wtemp2 0020                    wtemp3 0022                    wtemp4 0024  
-                  wtemp5 0026                    wtemp6 001D          __initialization 0003  
-           __end_of_main 0024                   ??_main 0010  __end_of__initialization 0003  
-             __pmaintext 0005     end_of_initialization 0003      start_initialization 0003  
-              ___latbits 0000            __pcstackBANK0 0010            __size_of_main 001F  
+            __CFG_CP$OFF 0000                       l20 0042                       l21 0046  
+                     l22 0045                       l30 003D                       l23 004C  
+                     l31 003E                       l24 0056                       l32 003F  
+                     l25 0056                       l33 003F                       l19 004D  
+                     l28 0013                       l29 002D                       _GO 0039  
+                     u70 004B                       u71 004A                       u80 0055  
+                     u81 0054                       u90 0024                       u91 0023  
+                     fsr 0004                      l450 0041                      l452 0042  
+                    l460 0006                      l454 0046                      l470 0013  
+                    l462 000A                      l456 004D                      l480 001E  
+                    l472 0017                      l464 000C                      l490 0037  
+                    l482 0024                      l474 0018                      l466 000E  
+                    l458 0005                      l492 0038                      l484 0029  
+                    l476 001A                      l468 0010                      l486 002D  
+                    l478 001C                      l488 0033                      u100 0029  
+                    u101 0028                      u110 0033                      u111 0032  
+                    u120 0037             __CFG_MCPU$ON 0000                     _GPIO 0006  
+                   _TMR0 0001                     _TRIS 0006                     _main 0005  
+                   btemp 001C                     start 0002            __CFG_MCLRE$ON 0000  
+                  ?_main 0010                    _ADRES 0008            __CFG_WDTE$OFF 0000  
+                  _delay 0040                    ltemp0 001C                    ltemp1 0020  
+                  ttemp0 001C                    ttemp1 001F                    wtemp0 001C  
+                  wtemp1 001E                    wtemp2 0020                    wtemp3 0022  
+        __initialization 0003             __end_of_main 0040                   ??_main 0000  
+                 ?_delay 0010                   _ADCON0 0007                   _OSCCAL 0005  
+                 _OPTION 0000              entry__delay 00FE                   delay@n 0010  
+__end_of__initialization 0003           __pcstackCOMMON 0000            __end_of_delay 0057  
+                ??_delay 0000               __pmaintext 0005                  __ptext0 0000  
+                __ptext1 0040                  main@fan 0011     end_of_initialization 0003  
+    start_initialization 0003         __CFG_IOSCFS$4MHZ 0000            __pcstackBANK0 0010  
+              __pjmp_tab 00FE           __size_of_delay 0017            __size_of_main 003B  
+               main@temp 0012  

@@ -2,87 +2,111 @@
 [d version 1.1 ]
 [d edition pro ]
 [d chip 10F220 ]
-[d frameptr 6 ]
-"4 /opt/microchip/xc8/v1.32/sources/common/abdiv.c
+"5 C:\Programs\Microchip\xc8\v1.20\sources\pic\abdiv.c
 [v ___abdiv __abdiv `(c  1 e 1 0 ]
-"4 /opt/microchip/xc8/v1.32/sources/common/abmod.c
+"5 C:\Programs\Microchip\xc8\v1.20\sources\pic\abmod.c
 [v ___abmod __abmod `(c  1 e 1 0 ]
-"33 /opt/microchip/xc8/v1.32/sources/common/abtoft.c
+"34 C:\Programs\Microchip\xc8\v1.20\sources\pic\abtoft.c
 [v ___abtoft __abtoft `(f  1 e 3 0 ]
-"6 /opt/microchip/xc8/v1.32/sources/common/aldiv.c
+"5 C:\Programs\Microchip\xc8\v1.20\sources\pic\aldiv.c
 [v ___aldiv __aldiv `(l  1 e 4 0 ]
-"5 /opt/microchip/xc8/v1.32/sources/common/almod.c
+"5 C:\Programs\Microchip\xc8\v1.20\sources\pic\almod.c
 [v ___almod __almod `(l  1 e 4 0 ]
-"42 /opt/microchip/xc8/v1.32/sources/common/altoft.c
+"43 C:\Programs\Microchip\xc8\v1.20\sources\pic\altoft.c
 [v ___altoft __altoft `(f  1 e 3 0 ]
-"6 /opt/microchip/xc8/v1.32/sources/common/atdiv.c
+"5 C:\Programs\Microchip\xc8\v1.20\sources\pic\atdiv.c
 [v ___atdiv __atdiv `(m  1 e 3 0 ]
-"6 /opt/microchip/xc8/v1.32/sources/common/atmod.c
+"5 C:\Programs\Microchip\xc8\v1.20\sources\pic\atmod.c
 [v ___atmod __atmod `(m  1 e 3 0 ]
-"37 /opt/microchip/xc8/v1.32/sources/common/attoft.c
+"38 C:\Programs\Microchip\xc8\v1.20\sources\pic\attoft.c
 [v ___attoft __attoft `(f  1 e 3 0 ]
-"6 /opt/microchip/xc8/v1.32/sources/common/awdiv.c
+"5 C:\Programs\Microchip\xc8\v1.20\sources\pic\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
-"6 /opt/microchip/xc8/v1.32/sources/common/awmod.c
+"5 C:\Programs\Microchip\xc8\v1.20\sources\pic\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
-"32 /opt/microchip/xc8/v1.32/sources/common/awtoft.c
+"33 C:\Programs\Microchip\xc8\v1.20\sources\pic\awtoft.c
 [v ___awtoft __awtoft `(f  1 e 3 0 ]
-"62 /opt/microchip/xc8/v1.32/sources/common/float.c
-[v ___ftpack __ftpack `(f  1 e 3 0 ]
-"86 /opt/microchip/xc8/v1.32/sources/common/ftadd.c
-[v ___ftadd __ftadd `(f  1 e 3 0 ]
-"4 /opt/microchip/xc8/v1.32/sources/common/ftge.c
-[v ___ftge __ftge `(b  1 e 0 0 ]
-"62 /opt/microchip/xc8/v1.32/sources/common/ftmul.c
-[v ___ftmul __ftmul `(f  1 e 3 0 ]
-"15 /opt/microchip/xc8/v1.32/sources/common/ftneg.c
-[v ___ftneg __ftneg `(f  1 e 3 0 ]
-"18 /opt/microchip/xc8/v1.32/sources/common/ftsub.c
-[v ___ftsub __ftsub `(f  1 e 3 0 ]
-"44 /opt/microchip/xc8/v1.32/sources/common/fttol.c
-[v ___fttol __fttol `(l  1 e 4 0 ]
-"4 /opt/microchip/xc8/v1.32/sources/common/lbdiv.c
-[v ___lbdiv __lbdiv `(uc  1 e 1 0 ]
-"4 /opt/microchip/xc8/v1.32/sources/common/lbmod.c
-[v ___lbmod __lbmod `(uc  1 e 1 0 ]
-"27 /opt/microchip/xc8/v1.32/sources/common/lbtoft.c
-[v ___lbtoft __lbtoft `(f  1 e 3 0 ]
-"6 /opt/microchip/xc8/v1.32/sources/common/lldiv.c
-[v ___lldiv __lldiv `(ul  1 e 4 0 ]
-"6 /opt/microchip/xc8/v1.32/sources/common/llmod.c
-[v ___llmod __llmod `(ul  1 e 4 0 ]
-"35 /opt/microchip/xc8/v1.32/sources/common/lltoft.c
-[v ___lltoft __lltoft `(f  1 e 3 0 ]
-"6 /opt/microchip/xc8/v1.32/sources/common/ltdiv.c
-[v ___ltdiv __ltdiv `(um  1 e 3 0 ]
-"6 /opt/microchip/xc8/v1.32/sources/common/ltmod.c
-[v ___ltmod __ltmod `(um  1 e 3 0 ]
-"30 /opt/microchip/xc8/v1.32/sources/common/lttoft.c
-[v ___lttoft __lttoft `(f  1 e 3 0 ]
-"6 /opt/microchip/xc8/v1.32/sources/common/lwdiv.c
-[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
-"6 /opt/microchip/xc8/v1.32/sources/common/lwmod.c
-[v ___lwmod __lwmod `(ui  1 e 2 0 ]
-"28 /opt/microchip/xc8/v1.32/sources/common/lwtoft.c
-[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
-"15 /opt/microchip/xc8/v1.32/sources/common/Umul16.c
-[v ___wmul __wmul `(ui  1 e 2 0 ]
-"15 /opt/microchip/xc8/v1.32/sources/common/Umul24.c
-[v ___tmul __tmul `(um  1 e 3 0 ]
-"15 /opt/microchip/xc8/v1.32/sources/common/Umul32.c
-[v ___lmul __lmul `(ul  1 e 4 0 ]
-"4 /opt/microchip/xc8/v1.32/sources/common/Umul8.c
+"3 C:\Programs\Microchip\xc8\v1.20\sources\pic\bmul.c
 [v ___bmul __bmul `(uc  1 e 1 0 ]
-"49 /opt/microchip/xc8/v1.32/sources/pic/ftdiv.c
+"63 C:\Programs\Microchip\xc8\v1.20\sources\pic\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"87 C:\Programs\Microchip\xc8\v1.20\sources\pic\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"50 C:\Programs\Microchip\xc8\v1.20\sources\pic\ftdiv.c
 [v ___ftdiv __ftdiv `(f  1 e 3 0 ]
-"6 /home/alev/work/indiv/carremont/fedor-rez@avensis.org.ru/thwo/main.c
+"5 C:\Programs\Microchip\xc8\v1.20\sources\pic\ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+"52 C:\Programs\Microchip\xc8\v1.20\sources\pic\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"16 C:\Programs\Microchip\xc8\v1.20\sources\pic\ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+"17 C:\Programs\Microchip\xc8\v1.20\sources\pic\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"45 C:\Programs\Microchip\xc8\v1.20\sources\pic\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+"5 C:\Programs\Microchip\xc8\v1.20\sources\pic\lbdiv.c
+[v ___lbdiv __lbdiv `(uc  1 e 1 0 ]
+"5 C:\Programs\Microchip\xc8\v1.20\sources\pic\lbmod.c
+[v ___lbmod __lbmod `(uc  1 e 1 0 ]
+"28 C:\Programs\Microchip\xc8\v1.20\sources\pic\lbtoft.c
+[v ___lbtoft __lbtoft `(f  1 e 3 0 ]
+"5 C:\Programs\Microchip\xc8\v1.20\sources\pic\lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"5 C:\Programs\Microchip\xc8\v1.20\sources\pic\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+"36 C:\Programs\Microchip\xc8\v1.20\sources\pic\lltoft.c
+[v ___lltoft __lltoft `(f  1 e 3 0 ]
+"3 C:\Programs\Microchip\xc8\v1.20\sources\pic\lmul.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"5 C:\Programs\Microchip\xc8\v1.20\sources\pic\ltdiv.c
+[v ___ltdiv __ltdiv `(um  1 e 3 0 ]
+"5 C:\Programs\Microchip\xc8\v1.20\sources\pic\ltmod.c
+[v ___ltmod __ltmod `(um  1 e 3 0 ]
+"31 C:\Programs\Microchip\xc8\v1.20\sources\pic\lttoft.c
+[v ___lttoft __lttoft `(f  1 e 3 0 ]
+"5 C:\Programs\Microchip\xc8\v1.20\sources\pic\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"5 C:\Programs\Microchip\xc8\v1.20\sources\pic\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"29 C:\Programs\Microchip\xc8\v1.20\sources\pic\lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+"3 C:\Programs\Microchip\xc8\v1.20\sources\pic\tmul.c
+[v ___tmul __tmul `(um  1 e 3 0 ]
+"3 C:\Programs\Microchip\xc8\v1.20\sources\pic\wmul.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"15 C:\docs\work\indiv\thwo\thwo\main.c
+[v _delay delay `(v  1 e 0 0 ]
+"23
 [v _main main `(v  1 e 0 0 ]
-"450 /opt/microchip/xc8/v1.32/include/pic10f220.h
+"63 C:\Programs\Microchip\xc8\v1.20\include\pic10f220.h
+[v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
+"187
+[v _OSCCAL OSCCAL `VEuc  1 e 1 @5 ]
+"257
+[v _GPIO GPIO `VEuc  1 e 1 @6 ]
+"294
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @7 ]
+"375
+[v _ADRES ADRES `VEuc  1 e 1 @8 ]
+"444
+[v _OPTION OPTION `VWEuc  1 e 1 @0 ]
+"447
 [v _TRIS TRIS `VWEuc  1 e 1 @6 ]
-"529
-[v _GP2 GP2 `VEb  1 e 0 @50 ]
-"6 /home/alev/work/indiv/carremont/fedor-rez@avensis.org.ru/thwo/main.c
+"518
+[v _GO GO `VEb  1 e 0 @57 ]
+"23 C:\docs\work\indiv\thwo\thwo\main.c
 [v _main main `(v  1 e 0 0 ]
 {
-"17
+"25
+[v main@temp temp `uc  1 a 1 2 ]
+"26
+[v main@fan fan `uc  1 a 1 1 ]
+"52
+} 0
+"15
+[v _delay delay `(v  1 e 0 0 ]
+{
+[v delay@n n `uc  1 a 1 0 ]
+[v delay@n n `uc  1 a 1 0 ]
+"20
 } 0

@@ -1,3 +1,4 @@
-_main: CODE, 5 0 31
+_delay: CODE, 64 0 23
+_main: CODE, 5 0 59
 __initialization: ENTRY, 3 0 0
-Total: 31
+Total: 82
